@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+       <b>Use callback functions and complete remaining arithmetic operations </b>
+
+                    (Multiplication remainders,division,etc--)
+
+    </p>
+    <script>
+          function opr(n1, n2, call) {
+            call(n1, n2);
+        }
+        // call back function
+        function add(n1, n2) {
+            console.log(n1 + n2);
+        }
+        const sub = (n1, n2) => {
+            console.log(n1 - n2);
+        }
+        const mul = (n1, n2) => {
+            console.log(n1 * n2);
+        }
+        const div = (n1, n2) => {
+            console.log(n1 / n2);
+        }
+        opr(5, 6, add);
+        opr(5, 6, sub);
+        opr(5, 6, mul);
+        opr(5, 6, div);
+
+        function oprs(n1, n2, calls) {
+            console.log(calls(n1, n2));
+        }
+        // call back function
+        function adds(n1, n2) {
+            return(n1 + n2);
+        }
+        const subs = (n1, n2) => {
+            return(n1 - n2);
+        }
+        const muls = (n1, n2) => {
+            return(n1 * n2);
+        }
+        const divs = (n1, n2) => {
+            return(n1 / n2);
+        }
+        oprs(5, 6, adds);
+        oprs(5, 6, subs);
+        oprs(5, 6, muls);
+        oprs(5, 6, divs);
+    </script>
+</body>
+</html>
